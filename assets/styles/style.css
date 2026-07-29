@@ -298,3 +298,68 @@ section.about {
         }
     }
 }
+
+section.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: auto -10px;
+    justify-items: center;
+    isolation: isolate;
+    
+    .container {
+        width: 100%;
+        position: relative;
+        overflow-x: clip;
+
+        .circle-detail {
+            width: 70%;
+            max-height: 150%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: var(--middle-green);
+            
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .container:nth-child(odd) {
+        .circle-detail {
+            left: 100%;
+        }
+        
+        .product {
+            flex-direction: row-reverse;
+        }
+
+        .product .info {
+            text-align: end;
+        }
+    }
+    
+    .product {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+        
+        .photo {
+            width: 38%;
+            display: flex;
+            justify-content: center;
+            img {
+                height: clamp(200px, 10vw, 300px);
+            }
+        }
+
+        .info {
+            text-align: start;
+            width: 1fr;
+        }
+    }
+}
