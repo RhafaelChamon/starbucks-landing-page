@@ -13,6 +13,7 @@
     /* Cores Principais */
     --green: #00704a;
     --dark-green: #1e3932;
+    --middle-green: #40b18b;
     --light-green: #d4e9e2;
 
     /* Neutros e Fundo */
@@ -101,20 +102,19 @@ header nav {
             border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
             
-            background:  rgba(94, 78, 69, 0.3);
+            background:  rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             
             a {
-                color: var(--text-inverse);
+                color: var(--text-main);
                 text-decoration: none;
             }
             
             &:hover {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(94, 78, 69, 0.4);
                 a {
-                    color: var(--text-main);
-                    font-weight: bold;
+                    color: var(--text-inverse);
                 }
             }
         }
@@ -146,34 +146,35 @@ main {
         gap: 10px;
     }
 
-    .classic-button {
-        background-color: var(--green);
-        color: var(--text-inverse);
-        font-weight: 500;
-        font-size: clamp(1em, 5vw, 1.5em);
-        padding: 10px 20px;
-        border: 2px solid var(--green);
-        border-radius: 10px;
-        box-shadow: 2px 2px var(0, 0, 0, 0.4);
-        transition: box-shadow .2s;
-
-        &:hover {
-            background-color: var(--color-neutral-2);
-            color: var(--text-inverse);
-            border: 2px solid rgba(0, 0, 0, 0.4);
-            box-shadow: inset 0px 2px var(--green);
-            transform: translate(0px, 2px);
-        }
-    }
-
-    .secondary {
-        background-color: var(--color-neutral-1);
-        border: 2px solid var(--green);
-        box-shadow: 2px 2px var(0, 0, 0, 0.4);
-        color: var(--green);
-    }
 }
-    
+
+.classic-button {
+    background-color: var(--green);
+    color: var(--color-neutral-1);
+    font-weight: 500;
+    font-size: clamp(0.8em, 5vw, 1.6em);
+    padding: 10px;
+    width: clamp(150px, 40%, 250px);
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    box-shadow: 0 3px 0 var(--dark-green);
+    transition: all .2s;
+
+}
+
+.classic-button.secondary {
+    background-color: var(--color-neutral-1);
+    color: var(--green);
+}
+
+.classic-button:hover {
+    background-color: var(--middle-green);
+    font-weight: bolder;
+    color: var(--text-inverse);
+    border-color: var(--green);
+    box-shadow: 0 -3px 0 var(--dark-green);
+    transform: translateY(2px);
+}
 
 section.home {
     padding: 20px;
