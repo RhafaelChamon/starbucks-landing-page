@@ -1,0 +1,16 @@
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  /*
+  overflow: visible !important;
+  animation: scrollReveal linear auto;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  */
+}

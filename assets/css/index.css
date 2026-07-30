@@ -13,15 +13,16 @@ body {
     background-color: var(--color-neutral-1);
     font-family: 'Poppins', sans-serif;
     color: var(--text-main);
+    overflow-x: hidden;
 
     h1 {
-        font-size: clamp(2em, 10vw, 3em);
+        font-size: clamp(2em, 8vw, 3em);
         text-transform: uppercase;
         text-align: center;
     }
 
     h2 {
-        font-size: clamp(1.8em, 6vw, 2em);
+        font-size: clamp(1.4em, 5vw, 2em);
         display: inline-block;
 
         &::after {
@@ -40,8 +41,8 @@ body {
 
     .center {
         display: flex;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
     }
 
     .options a {
@@ -51,12 +52,15 @@ body {
     .classic-button {
         background-color: var(--green);
         color: var(--color-neutral-1);
+        
         font-weight: 500;
-        font-size: clamp(0.8em, 5vw, 1.6em);
+        font-size: clamp(0.8em, 4vw, 1.6em);
+        
         padding: 10px;
         border: 2px solid var(--green);
         border-radius: 10px;
         box-shadow: 0 3px 0 var(--dark-green);
+
         transition: all .2s;
         cursor: pointer;
     }
@@ -69,16 +73,10 @@ body {
     .classic-button:hover {
         background-color: var(--middle-green);
         color: var(--text-inverse);
+
         border-color: var(--green);
         box-shadow: 0 -3px 0 var(--dark-green);
+        
         transform: translateY(2px);
     }
 }
-
-@media screen and (min-width: 800px) {
-    header {
-        
-    }
-}
-
-@media screen and (min-width: 1080px) {}

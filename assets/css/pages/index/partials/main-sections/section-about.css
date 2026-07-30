@@ -1,13 +1,12 @@
 section.about {
     background: var(--green) url('../../../../../images/about/bg-about.webp') top center / 100% repeat-y;
-    margin-right: -10px;
-    margin-left: -10px;
+    margin-inline: -10px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 2px 4px var(--color-neutral-5);
 
     display: grid;
-    grid-template: auto auto / 1fr;
+    grid-template-columns: 1fr;
 
     h2 {
         color: var(--color-neutral-1);
@@ -22,7 +21,7 @@ section.about {
         width: 100%;
 
         img {
-            width: clamp(100px, 100%, 400px);
+            width: clamp(100px, 100%, 300px);
         }
     }
 
@@ -33,16 +32,17 @@ section.about {
     }
 
     article {
+        width: 100%;
+        
         background: rgba(94, 78, 69, 0.3);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
 
-        width: clamp(100px, 100%, 500px);
+        color: var(--color-neutral-1);
+        border-radius: 10px;
         margin: 10px 0;
         padding: 10px;
-        border-radius: 10px;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
-        color: var(--color-neutral-1);
 
         h1 {
             font-size: clamp(1.5em, 6vw, 2em);
@@ -55,17 +55,29 @@ section.about {
         strong {
             color: var(--text-strong);
         }
+
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        will-change: transform;
+
+        &.info1:hover {
+            transform: translate(-10px, -10px);
+        }
+
+        &.info2:hover {
+            transform: translate(10px, -10px);
+        }
     }
 }
 
 @media screen and (min-width: 800px) {
     section.about {
-        max-width: 1300px;
-        margin: auto;
+        max-width: 1000px;
+        margin-inline: auto;
+
     
         .info{
-            display: grid;
-            grid-template: auto auto / repeat(3, 1fr);
+            flex-direction: row;
+            justify-content: space-around;
         }
     
         article.info1 {

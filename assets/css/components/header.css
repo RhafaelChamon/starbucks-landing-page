@@ -6,16 +6,16 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: clamp(4em, 10vh, 6em);
-    
+
     transition: box-shadow .5s;
     position: sticky;
     top: 0;
     z-index: 2;
-    
+
     img {
         height: 100%;
     }
-    
+
     nav {
         place-self: center end;
         position: relative;
@@ -24,7 +24,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: end;
-        
+
         .menu-button {
             font-size: clamp(1rem, 10vw, 2rem);
             color: var(--text-main);
@@ -32,12 +32,12 @@ header {
             border: none;
             cursor: pointer;
             transition: color 0.2s ease;
-            
+
             &:hover {
                 color: var(--color-neutral-3);
             }
         }
-    
+
         .menu {
             list-style: none;
             width: clamp(100px, 30vw, 500px);
@@ -45,39 +45,40 @@ header {
             position: absolute;
             top: 85%;
             display: none;
-            
+
             li {
                 font-size: clamp(1rem, 2vw, 2rem);
                 padding: 15px;
                 margin: 5px 0;
                 text-align: center;
-                
+
                 border: 1px solid rgba(255, 255, 255, 0.3);
                 border-radius: 10px;
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-                
-                background:  rgba(255, 255, 255, 0.5);
+
+                background: rgba(255, 255, 255, 0.5);
                 backdrop-filter: blur(5px);
                 -webkit-backdrop-filter: blur(5px);
-                
+
                 a {
                     color: var(--text-main);
                     text-decoration: none;
                 }
-                
+
                 &:hover {
                     background-color: rgba(94, 78, 69, 0.4);
+
                     a {
                         color: var(--text-inverse);
                     }
                 }
             }
         }
-        
+
         &:hover .menu {
             display: block;
         }
-        
+
         .menu.show {
             display: block;
         }
@@ -91,24 +92,23 @@ header {
 }
 
 
-@media screen and (min-width: 800px) {
-}
+@media screen and (min-width: 800px) {}
 
 @media screen and (min-width: 1080px) {
     header {
-        background:  rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
 
         grid-template-columns: auto 3fr 1fr;
-        
+
         nav {
             place-self: center;
-            
+
             .menu-button {
                 display: none;
             }
-            
+
             .menu.show {
                 display: flex;
             }
@@ -120,23 +120,37 @@ header {
                 flex-direction: row;
                 justify-content: center;
                 gap: 10px;
-                
+
                 li {
                     font-size: 1rem;
                     padding: 5px 20px;
                     margin: 0;
                     border-radius: 20px;
-                    
+
                 }
             }
-    
+
             &:hover .menu {
                 display: flex;
             }
         }
-    
+
         .options {
             display: flex;
         }
+
+        .options .classic-button {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            color: var(--text-main);
+            border: 2px solid rgba(45, 164, 112, 0.3);
+            
+            &:hover {
+                background-color: rgba(45, 164, 112, 0.3);
+                border: 2px solid var(--green);
+            }
+        }
+
     }
 }

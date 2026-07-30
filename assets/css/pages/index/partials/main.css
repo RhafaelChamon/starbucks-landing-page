@@ -2,6 +2,7 @@
 @import url('main-sections/section-trending.css');
 @import url('main-sections/section-about.css');
 @import url('main-sections/section-products.css');
+@import url('../../../global/animations.css');
 
 main {
     background: var(--color-neutral-1) url('../../../../images/background-mobile.webp') top center / 100% repeat-y;
@@ -10,28 +11,16 @@ main {
     section {
         margin-bottom: 7vh;
         scroll-margin-top: calc(clamp(6rem, 10vw, 8rem) + 5vh);
-    }
-}
 
-@media screen and (min-width: 800px) {
-    main {
-        h1 {
-            font-size: 3em;
-        }
-
-        h2 {
-            font-size: 2em;
-        }
-
-        h3,
-        p {
-            font-size: 1em;
-        }
+        overflow: visible !important;
+        animation: scrollReveal linear auto;
+        animation-timeline: view();
+        animation-range: entry 0% cover 10%;
     }
 }
 
 @media screen and (min-width: 1080px) {
     main {
-        background: var(--color-neutral-3) url('../../../../images/background-desktop.webp') top center / contain no-repeat;
+        background: var(--color-neutral-3) url('../../../../images/background-desktop.webp') top center / cover no-repeat;
     }
 }
