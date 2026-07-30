@@ -4,73 +4,34 @@
 @import url('main-sections/section-products.css');
 
 main {
-    background: var(--color-neutral-1) url('../images/background-mobile.webp') top center / 100% repeat-y;
+    background: var(--color-neutral-1) url('../../../../images/background-mobile.webp') top center / 100% repeat-y;
     padding: 10px;
 
-}
-
-main section {
-    margin-bottom: 7vh;
-    scroll-margin-top: calc(clamp(6rem, 10vw, 8rem) + 5vh);
-}
-
-main h1 {
-    font-size: clamp(2em, 10vw, 3.5em);
-    text-transform: uppercase;
-    text-align: center;
-}
-
-main h2 {
-    font-size: clamp(1.8em, 6vw, 2.5em);
-    display: inline-block;
-
-    &::after {
-        content: "";
-        display: block;
-        width: 50%;
-        height: 4px;
-        background-color: var(--green);
+    section {
+        margin-bottom: 7vh;
+        scroll-margin-top: calc(clamp(6rem, 10vw, 8rem) + 5vh);
     }
 }
 
-main h3,
-main p {
-    font-size: clamp(0.8em, 3vw, 1.3em);
+@media screen and (min-width: 800px) {
+    main {
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3,
+        p {
+            font-size: 1em;
+        }
+    }
 }
 
-main .center {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-main .options a {
-    display: inline-block;
-}
-
-main .classic-button {
-    background-color: var(--green);
-    color: var(--color-neutral-1);
-    font-weight: 500;
-    font-size: clamp(0.8em, 5vw, 1.6em);
-    padding: 10px;
-    width: clamp(150px, 40%, 250px);
-    border: 2px solid var(--green);
-    border-radius: 10px;
-    box-shadow: 0 3px 0 var(--dark-green);
-    transition: all .2s;
-    cursor: pointer;
-}
-
-main .classic-button.secondary {
-    background-color: var(--color-neutral-1);
-    color: var(--green);
-}
-
-main .classic-button:hover {
-    background-color: var(--middle-green);
-    color: var(--text-inverse);
-    border-color: var(--green);
-    box-shadow: 0 -3px 0 var(--dark-green);
-    transform: translateY(2px);
+@media screen and (min-width: 1080px) {
+    main {
+        background: var(--color-neutral-3) url('../../../../images/background-desktop.webp') top center / contain no-repeat;
+    }
 }
