@@ -5,6 +5,13 @@
     --middle-green: #2da471;
     --light-green: #d4e9e2;
 
+    /* Cores com Transparência */   
+    --transparent-1: rgba(255, 255, 255, 0.3);
+    --transparent-2: rgba(255, 255, 255, 0.6);
+    --transparent-3: rgba(45, 164, 112, 0.3);
+    --transparent-4: rgba(94, 78, 69, 0.3);
+    
+
     /* Neutros e Fundo */
     --color-neutral-0: #ffffff;
     --color-neutral-1: #eee4db;

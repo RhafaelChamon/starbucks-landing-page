@@ -1,10 +1,10 @@
 section.trending {
-    max-width: 1200px;
-    margin: auto;
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+
+    max-width: 1200px;
+    margin-inline: auto;
 
     h2 {
         grid-column: 1 / -1;
@@ -21,8 +21,7 @@ section.trending {
             will-change: transform, filter;
         }
 
-        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-            box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         will-change: transform;
 
         &:hover {
@@ -63,7 +62,6 @@ section.trending {
 @media screen and (min-width: 1080px) {
     section.trending {
         grid-template-columns: repeat(4, 1fr);
-        margin-bottom: 7vh;
         gap: 20px;
 
         .card {

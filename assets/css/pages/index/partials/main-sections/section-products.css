@@ -1,10 +1,10 @@
 section.products {
-    margin-inline: -10px;
-    justify-items: center;
-    isolation: isolate;
-
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center;
+
+    margin-inline: -10px;
+    isolation: isolate;
 
     h2 {
         grid-column: 1 / -1;
@@ -13,6 +13,7 @@ section.products {
     .container {
         width: 100%;
         position: relative;
+        overflow-x: clip;
 
         .circle-detail {
             width: 70%;
@@ -35,8 +36,7 @@ section.products {
             will-change: transform, filter;
         }
 
-        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-        box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         will-change: transform;
 
         &:hover {
@@ -53,10 +53,10 @@ section.products {
         width: 100%;
 
         .photo {
-            width: 38%;
-            height: 100%;
             display: flex;
             justify-content: center;
+            width: 38%;
+            height: 100%;
 
             img {
                 height: clamp(150px, 45vw, 250px);
@@ -93,19 +93,19 @@ section.products {
         margin-inline: auto;
 
         .container {
-            border-radius: 50px;
+            display: grid;
+            place-items: center;
             padding: 20px;
-
+            
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
+
+            border-radius: 50px;
             box-shadow: 0px 2px 4px var(--color-neutral-5);
 
-            display: grid;
-            place-items: center;
-
             overflow: clip;
-
+            
             .circle-detail {
                 opacity: 0.9;
                 height: 70%;

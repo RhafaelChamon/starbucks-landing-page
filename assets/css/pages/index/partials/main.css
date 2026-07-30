@@ -2,7 +2,6 @@
 @import url('main-sections/section-trending.css');
 @import url('main-sections/section-about.css');
 @import url('main-sections/section-products.css');
-@import url('../../../global/animations.css');
 
 main {
     background: var(--color-neutral-1) url('../../../../images/background-mobile.webp') top center / 100% repeat-y;
@@ -21,6 +20,6 @@ main {
 
 @media screen and (min-width: 1080px) {
     main {
-        background: var(--color-neutral-3) url('../../../../images/background-desktop.webp') top center / cover no-repeat;
+        background: var(--color-neutral-1) url('../../../../images/background-desktop.webp') top center / cover no-repeat;
     }
 }

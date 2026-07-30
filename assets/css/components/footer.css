@@ -1,11 +1,12 @@
 footer {
-    background-color: var(--green);
     padding: 10px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
+    background-color: var(--green);
     color: var(--text-inverse);
-    position: relative;
+    text-align: center;
     font-style: italic;
+    border-radius: 10px 10px 0 0;
+    
+    position: relative;
     a {
         color: var(--text-inverse);
         text-decoration: none;
