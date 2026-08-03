@@ -1,9 +1,17 @@
 const menu_button = document.querySelector('.menu-button')
 const menu = document.querySelector('.menu')
+const optionsMenu = document.querySelectorAll('.menu li a')
+
 let lastPosition = window.scrollY
 
 menu_button.addEventListener('click', () => {
     menu.classList.toggle('show')
+})
+
+optionsMenu.forEach(option => {
+    option.addEventListener('click', () => {
+        menu.classList.remove('show')
+    })
 })
 
 window.addEventListener('scroll', () => {
