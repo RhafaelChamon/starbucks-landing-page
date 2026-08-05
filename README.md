@@ -1,0 +1,1 @@
+Acesse o site hospedado pelo GitHub Pages: <https://rhafaelchamon.github.io/starbucks-landing-page/>
